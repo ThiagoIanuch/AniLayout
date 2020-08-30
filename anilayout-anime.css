@@ -1,0 +1,224 @@
+/*
+MyAnimeList: https://myanimelist.net/profile/ThiagoIanuch
+AniList: https://anilist.co/user/ThiagoIanuch/animelist
+GitHub: https://github.com/ThiagoIanuch
+*/
+
+@\import "https://malscraper.azurewebsites.net/covers/auto/presets/more";
+
+/* body */
+body {
+    background-color: rgba(11, 22, 34);
+}
+
+/* list */
+#list_surround {
+    width: 67%;
+    position: absolute;
+    right: 7%;
+    top: 0%;
+    color: rgba(159, 173, 189);
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+a {
+    color: rgba(159,173,189);
+    text-decoration: none;
+}
+
+.td1:nth-of-type(3), .td2:nth-of-type(3), .table_header:nth-of-type(3), .td1:nth-of-type(4), .td2:nth-of-type(4), .table_header:nth-of-type(4), .td1:nth-of-type(5), .td2:nth-of-type(5), .table_header:nth-of-type(5) {
+    width: 10%;
+}
+
+.table_header:nth-of-type(2) {
+    border-radius: 4px 0 0 0;
+}
+
+.table_header:nth-of-type(4) {
+    border-radius: 0 4px 0 0;
+}
+
+.td1:nth-of-type(4), .td2:nth-of-type(4), .table_header:nth-of-type(4){
+    position: relative;
+    left: 9.9%;
+}
+
+.td1:nth-of-type(5), .td2:nth-of-type(5), .table_header:nth-of-type(5){
+    position: relative;
+    left: -10%;
+}
+
+/* list color */
+.td1, .td2, .table_header{
+	background-color: rgba(21, 31, 46);
+}
+
+tr:hover .td1, tr:hover .td2 {
+    background-color: rgb(124, 137, 154);
+    color: rgba(237, 241, 245);
+}
+
+tr:hover .td1 a, tr:hover .td2 a {
+    color: rgba(237, 241, 245);
+}
+
+/* category links */
+.status_selected, .status_not_selected {
+    width: 175px;
+    height: 25px;
+    position: absolute;
+    left: -30%;
+    padding: 0 0 0 10px;
+    line-height: 25px;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.status_selected {
+    background-color: rgba(21, 31, 46);
+}
+
+#list_surround table:first-of-type td:nth-of-type(1) {
+    top: 170px;
+}
+
+#list_surround table:first-of-type td:nth-of-type(2) {   
+    top: 210px;
+}
+
+#list_surround table:first-of-type td:nth-of-type(3) {
+    top: 250px;
+}
+
+#list_surround table:first-of-type td:nth-of-type(4) {
+    top: 290px;
+}
+
+#list_surround table:first-of-type td:nth-of-type(5) {
+    top: 330px;
+}
+
+#list_surround table:first-of-type td:nth-of-type(6) {
+    top: 130px;
+}
+
+#list_surround table:first-of-type td:nth-of-type(6):before {
+    width: 210px;
+    top: -40px;
+    margin-left: -10px;
+    content: "Lists";
+    position: absolute;
+    padding-left: none;
+}
+
+/* headers title */
+.header_title {
+    font-size: 25px;
+    padding: 0 0 10px 30px;
+}
+
+/* table header */
+.table_header {
+    height: 50px;
+}
+
+.table_header:nth-of-type(2) a{
+    margin-left: 62px;
+}
+
+/* hidden status, id, tags, and totals*/
+.td1:nth-of-type(1), .td2:nth-of-type(1), .table_header:nth-of-type(1), .td1:nth-of-type(6), .td2:nth-of-type(6), .table_header:nth-of-type(6), .category_totals, #grand_totals {
+    display: none;
+}
+
+ /* tags */
+.td1:nth-of-type(2) a:nth-of-type(2), .td2:nth-of-type(2) a:nth-of-type(2) {
+    display: none;
+}
+
+td:nth-of-type(6) small {
+    display: none;
+}
+
+#list_surround .List_LightBox {
+    padding-right: 30px;
+}
+
+.td1:nth-of-type(3):before, .td2:nth-of-type(3):before {
+    width: 40px;
+    content: url(https://i.imgur.com/tvKePgs.png);
+    background-size: cover;
+    position: absolute;
+    right: 28%;
+    margin-top: -2px;
+    z-index: 998;
+}
+
+tr:hover .td1:nth-of-type(6), tr:hover .td2:nth-of-type(6)  {
+    min-width: 25%;
+    background-color: rgb(14, 15, 15);
+    border-radius: 4px;
+    padding: 0px 5px 0px 5px;
+    display: block;
+    position: absolute;
+    right: 2px;
+    z-index: 999;
+    margin-top: 2%;
+}
+
+/* copyright */
+#copyright {
+    background-color: rgba(21, 31, 46);
+    margin-top: 40px!important;
+    padding: 10px;
+}
+
+#copyright:after {
+    margin-top: 5px;
+    background-color: rgba(21, 31, 46);
+    display: block;
+    Content: "List design by @ThiagoIanuch.";
+}
+
+/* thumbnail */
+.hide {
+    height:40px;
+    width:40px;
+    margin-left:10px;
+    margin-top:-51px;
+    background-color: rgba(11, 22, 34);
+    background-position:50% 50%;
+    background-repeat:no-repeat no-repeat;
+    background-size:cover;
+    border-radius: 3px;
+    display:inline-block !important;
+    position: absolute;
+}
+    
+.hide:hover {
+    width: 140px;
+    height: 200px;
+    margin-left:-160px;
+    border-radius: 3px;
+    background-color:transparent;
+    background-repeat:no-repeat no-repeat;
+    background-size:cover;
+    position:absolute;
+    z-index:1;
+}
+    
+.hide:hover:after {
+    width: 210px;
+    height: 75px;
+    content: " ";
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+    
+.td1:nth-of-type(2), .td2:nth-of-type(2) {
+    height: 62px;
+    padding-left: 60px;
+}
